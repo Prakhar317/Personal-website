@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="transition.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <style>
+        body{
+            
+            overflow: hidden;
+            font-family: 'Playfair Display', serif;
+
+        }
+
+        .button{
+            position: absolute;
+            top: 48.5%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background: none;
+            width: 380px;
+            height: 380px;
+            border: none;
+            font-size: 60px;
+            border-radius: 50%;
+            transition: .6s;
+            overflow: hidden;
+            text-align: center;
+            justify-content: center;
+            text-decoration: none;
+            vertical-align: middle;
+            margin: auto;
+            line-height: 360px;
+            color: black;
+        }
+
+        .button:focus{
+            outline: none;
+        }
+
+        .button::before{
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255,255,255,.5);
+            width: 60px;
+            height: 100%;
+            left: 0;
+            top: 0;
+            opacity: .5s;
+            filter:blur(30px);
+            transform: translateX(-130px) skewX(-15deg);
+            
+        }
+
+        .button:after{
+            content: '';
+            display: block;
+            position: absolute;
+            background: rgba(255,255,255,.2);
+            width: 30px;
+            height: 100%;
+            left: 30px;
+            top: 0;
+            opacity: 0;
+            filter:blur(30px);
+            transform: translateX(-100px) skewX(-15deg);
+        }
+
+        .button:hover{
+            background: none;
+            cursor: pointer;
+            color: white;
+        }
+
+        .button:hover::before{
+            transform: translateX(500px) skewX(-15deg);
+            opacity: .6;
+            transition: 1.5s;
+        }
+
+        .button:hover:after{
+            transform: translateX(500px) skewX(-15deg);
+            opacity: 1;
+            transition: 1.5s;
+        }
+
+        
+
+
+    </style>
+
+</head>
+<body data-router-wrapper>
+    <div class="transition transition1 is-active"></div>
+
+    <div data-router-view class="canvas" class="canvas">
+        <div class="index-button">
+            <a href = "index.html" class="button">Welcome</a>
+        </div>
+        <script>
+            let canvas;
+            let angle=0;
+            function setup() {
+                canvas = createCanvas(windowWidth, windowHeight,WEBGL);
+                
+            }
+
+            function draw() {
+                background(0);
+                // pointLight(255,0,255,-100,100,100);
+                // pointLight(0,255,255,100,100,100);
+                pointLight(220,0,220,0,0,-120)*cos(angle);
+                pointLight(0,220,220,0,-0,120*cos(angle));
+                //pointLight(255,255,255,0,-100,-200*sin(angle));
+                angle=angle+0.01;
+                
+                rotateX(34.35+mouseY/2500);
+                rotateY(34.25+mouseX/2500);
+                // rotateX(34.5);
+                // rotateY(34.5);
+                
+                translate(0,0);
+                ambientMaterial(255);
+                torus(500,300);
+                
+                
+                //angle+=0.03
+                
+                console.log(windowWidth);
+                console.log(mouseY);
+            }
+
+            function windowResized() {
+                resizeCanvas(windowWidth, windowHeight);
+            }
+
+            
+        </script>
+
+    </div>
+    <script src="trans.js"></script>
+</body>
+</html>

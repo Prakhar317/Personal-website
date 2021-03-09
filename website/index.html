@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Prakhar's website</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="main.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.rings.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container1">	
+		<div class="navigation">
+			<div class="right-side-nav">
+				<div class="nav-link-wrapper">
+					<a href="#top" class="button">Home</a>
+				</div>
+				<div class="nav-link-wrapper">
+					<a href="#about" class="button">About</a>	
+				</div>
+				<div class="nav-link-wrapper">
+					<a href="#projects" class="button">Projects</a>
+				</div>
+				<div class="nav-link-wrapper">
+					<a href="#contact" class="button">Contact me</a>
+				</div>
+			</div>
+			<div class="left-side-nav">
+				<div class="nav-link-wrapper">
+					<a href="landing.html" class="button">PRAKHAR MAURYA </a>
+				</div>
+			</div>
+		</div>
+		<section id="top" class="section">
+			<div id="test">
+			<div class="top-container">
+				<div class="portfolio-photo">
+					<img src="./assets/myPic.png" alt="">
+				</div>
+				<div class="welcome-text">
+					<div class="welcome-text1">
+						Hello <br>
+					</div>
+					<div class="welcome-text2">
+						I'm Prakhar Maurya
+					</div>
+					<div class="welcome-text3">
+						Computer Science and Design Student at IIIT Delhi
+					</div>
+				</div>
+			</div>
+		</div>
+			
+		</section>
+		<section id="about" class="section">
+			<div id="test">
+		    <div class="about-heading">
+			    <h1>about <br> me</h1>
+		    </div>
+			<div class="about-data">
+				I'm a student at IIIT Delhi currently doing my B.Tech 2nd year. <br>My interests range from learning about UI/UX to photography and football. <br> I enjoy working on front-end projects and learning more about front-end development. <br> I'm also interested in visual design and animation.
+			</div>
+		</section>
+		<section id="projects" class="section">
+			<div class="project-heading">
+				<h1>projects</h1>
+			</div>
+			<div class="project-data">
+				<ul class="project-grid">
+					<li>
+						<div class="box project1">
+							
+								<h3>Tiki Taka</h3>
+								<p>A foosball simulation using touch sensors and arduino</p>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="box project2">
+							
+								<h3>etc</h3>
+								<p>A service design for teachers that helps in improving teacher training </p>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="box project3">
+							
+								<h3>Garage Band</h3>
+								<p>A simulation of instruments using arduino and sensors</p>
+							</a>
+						</div>
+					</li>
+					<li>
+						<div class="box project4">
+							
+								<h3>Color Switch</h3>
+								<p>Game using OOPs concepts in Java</p>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</section>
+		<section id="contact" class="section">
+			<div class="contact-heading">
+				<h1>contact me</h1>
+			</div>
+			<div class="contact-data">
+				Email: prakhar19317@iiitd.ac.in <br>
+				Linkedin: www.linkedin.com/in/prakharmaurya00 <br>
+				Instagram: https://www.instagram.com/prakharmaurya_/ <br>
+			</div>
+		</section>
+	</div>
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TimelineMax.min.js" integrity="sha512-0xrMWUXzEAc+VY7k48pWd5YT6ig03p4KARKxs4Bqxb9atrcn2fV41fWs+YXTKb8lD2sbPAmZMjKENiyzM/Gagw==" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js" integrity="sha512-DkPsH9LzNzZaZjCszwKrooKwgjArJDiEjA5tTgr3YX4E6TYv93ICS8T41yFHJnnSmGpnf0Mvb5NhScYbwvhn2w==" crossorigin="anonymous"></script>
+	<script>
+		const a = document.getElementsByClassName('.portfolio-photo');
+		const t1=new TimelineMax();
+		t1.fromTo(a,1,{height:'0%'},{height:'80%'});
+		console.log(a);
+
+	</script> -->
+
+	<!-- smooth scroll script -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$(".navigation a").on('click',function(){
+				$("html,body").animate({
+					scrollTop: $($.attr(this,'href')).offset().top
+				},400);
+			});
+		});
+	</script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+	<script>
+	VANTA.NET({
+  el: "#test",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  backgroundColor: 0x202020,
+  color: 0xffdc58,
+  points: 9.00,
+  maxDistance: 22.00,
+  spacing: 14.00
+})
+	</script>
+</body>
+</html>
